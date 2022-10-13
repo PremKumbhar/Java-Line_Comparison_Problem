@@ -31,14 +31,16 @@ public class LineComparison {
 		System.out.println("Please enter value for line 2");
 		int lengthOfLine_2 = getLengthOfLine(scan);
 		
-		int val1 = lengthOfLine_1;
-		int val2 = lengthOfLine_2;
+		Integer val1 = lengthOfLine_1;
+		Integer val2 = lengthOfLine_2;
 		
 		System.out.println("*********************************************");
 		// To check greater than or less than
-		if (val1 == val2) {
+		//if (val1 == val2) {
+		if(val1.compareTo(val2) == 0) {
 			System.out.println("Both lines are equal");
-		} else if (val1 < val2) {
+		} //else if (val1 < val2) {
+		else if(val1.compareTo(val2) == -1) {
 			System.out.println("Lines 2 is greater");
 		} else {
 			System.out.println("Lines 1 is greater");
@@ -53,6 +55,6 @@ public class LineComparison {
 		 // Creating an object
 		 LineComparison x = new LineComparison();
 		 // Calling methode
-		 x.greatersmaller();     
+		 x.greatersmaller(); 
 	 }
 }
